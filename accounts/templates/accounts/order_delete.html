@@ -1,0 +1,10 @@
+{% extends 'accounts/master.html' %}
+{% block content %}
+    <h3>Are you sure delete this {{order}} ?</h3>
+    <form action="" method='POST'>
+    {% csrf_token %}    
+    <input type="submit" value="delete" class="btn btn-danger"></input>
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary" >Cancel</a>
+    
+    </form>
+{% endblock content %}
